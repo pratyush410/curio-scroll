@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curio Scroll — AI Tasks</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="image.jpg" class="logo" alt="Curio Scroll Logo"/>
+      <h1>Curio Scroll</h1>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">🏠 Home</a>
+      <a href="reels.html" class="nav-link">🎬 Reels</a>
+      <a href="games.html" class="nav-link">🎮 Games</a>
+      <a href="aitasks.html" class="nav-link active">🤖 AI Tasks</a>
+      <a href="ebook.html" class="nav-link">📚 eBook</a>
+      <a href="explore.html" class="nav-link">🔍 Explore</a>
+      <a href="messages.html" class="nav-link">💬 Messages</a>
+      <a href="profile.html" class="nav-link">👤 Profile</a>
+    </nav>
+  </header>
+  <div class="aitasks-container">
+    <h2>🤖 AI Curated Creative Tasks</h2>
+    <p class="subtitle">Daily challenges to boost your creativity and mindfulness</p>
+    <div class="tasks-grid">
+      <div class="task-card">
+        <div class="task-header">
+          <div class="task-difficulty">Easy</div>
+          <div class="task-category">Visual</div>
+        </div>
+        <h3>Color Psychology Challenge</h3>
+        <p>Design a mood board using only 3 colors that represent your current emotions.</p>
+        <div class="task-meta">⏱️ 15 mins | 🎨 Creative</div>
+        <button class="task-btn" onclick="startTask('color-psychology')">Start Task</button>
+      </div>
+      <div class="task-card">
+        <div class="task-header">
+          <div class="task-difficulty">Medium</div>
+          <div class="task-category">Writing</div>
+        </div>
+        <h3>Micropoetry Sprint</h3>
+        <p>Write 3 micro-poems (5 lines max) about different aspects of your day.</p>
+        <div class="task-meta">⏱️ 20 mins | ✍️ Writing</div>
+        <button class="task-btn" onclick="startTask('micropoetry')">Start Task</button>
+      </div>
+      <div class="task-card">
+        <div class="task-header">
+          <div class="task-difficulty">Medium</div>
+          <div class="task-category">Problem Solving</div>
+        </div>
+        <h3>Perspective Flip</h3>
+        <p>Choose a current problem and write it from 3 different perspectives.</p>
+        <div class="task-meta">⏱️ 25 mins | 🤔 Thinking</div>
+        <button class="task-btn" onclick="startTask('perspective-flip')">Start Task</button>
+      </div>
+      <div class="task-card">
+        <div class="task-header">
+          <div class="task-difficulty">Hard</div>
+          <div class="task-category">Innovation</div>
+        </div>
+        <h3>Future Vision Board</h3>
+        <p>Create a vision board (digital or physical) for your goals 5 years from now.</p>
+        <div class="task-meta">⏱️ 45 mins | 🚀 Innovation</div>
+        <button class="task-btn" onclick="startTask('future-vision')">Start Task</button>
+      </div>
+      <div class="task-card">
+        <div class="task-header">
+          <div class="task-difficulty">Easy</div>
+          <div class="task-category">Mindfulness</div>
+        </div>
+        <h3>Sensory Exploration</h3>
+        <p>Spend 10 mins observing one object using all 5 senses. Document your findings.</p>
+        <div class="task-meta">⏱️ 15 mins | 🧘 Mindfulness</div>
+        <button class="task-btn" onclick="startTask('sensory')">Start Task</button>
+      </div>
+      <div class="task-card">
+        <div class="task-header">
+          <div class="task-difficulty">Hard</div>
+          <div class="task-category">Storytelling</div>
+        </div>
+        <h3>Reverse Storytelling</h3>
+        <p>Write a story backwards! Start with the ending and work towards the beginning.</p>
+        <div class="task-meta">⏱️ 30 mins | 📖 Storytelling</div>
+        <button class="task-btn" onclick="startTask('reverse-story')">Start Task</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

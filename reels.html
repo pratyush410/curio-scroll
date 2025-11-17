@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curio Scroll — Interactive Reels</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="image.jpg" class="logo" alt="Curio Scroll Logo"/>
+      <h1>Curio Scroll</h1>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">🏠 Home</a>
+      <a href="reels.html" class="nav-link active">🎬 Reels</a>
+      <a href="games.html" class="nav-link">🎮 Games</a>
+      <a href="aitasks.html" class="nav-link">🤖 AI Tasks</a>
+      <a href="ebook.html" class="nav-link">📚 eBook</a>
+      <a href="explore.html" class="nav-link">🔍 Explore</a>
+      <a href="messages.html" class="nav-link">💬 Messages</a>
+      <a href="profile.html" class="nav-link">👤 Profile</a>
+    </nav>
+  </header>
+  <div class="reels-container">
+    <!-- Reel 1: Educational Content with Quiz -->
+    <div class="reel active">
+      <div class="reel-content">
+        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=400&q=80" alt="Reel 1"/>
+        <div class="reel-info">
+          <div class="reel-user">@CreativeGenius</div>
+          <div class="reel-caption">Color Theory Basics 🎨</div>
+        </div>
+      </div>
+      <div class="reel-interactive">
+        <div class="quiz-section">
+          <div class="quiz-question">What color is opposite to blue on the color wheel?</div>
+          <div class="quiz-options">
+            <button class="quiz-btn" onclick="answerQuiz(this, false)">Green</button>
+            <button class="quiz-btn" onclick="answerQuiz(this, true)">Orange</button>
+            <button class="quiz-btn" onclick="answerQuiz(this, false)">Purple</button>
+          </div>
+        </div>
+      </div>
+      <div class="reel-actions">
+        <button onclick="likeReel(this)">❤️ 1.2K</button>
+        <button onclick="sharePost()">🔄 Share</button>
+      </div>
+    </div>
+
+    <!-- Reel 2: Challenge -->
+    <div class="reel">
+      <div class="reel-content">
+        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80" alt="Reel 2"/>
+        <div class="reel-info">
+          <div class="reel-user">@MindfulJourney</div>
+          <div class="reel-caption">7-Day Mindfulness Challenge 🧘</div>
+        </div>
+      </div>
+      <div class="reel-interactive">
+        <div class="challenge-section">
+          <div class="challenge-text">Join the challenge! How many days can you meditate?</div>
+          <div class="challenge-buttons">
+            <button class="challenge-btn" onclick="joinChallenge(this, 7)">7 Days</button>
+            <button class="challenge-btn" onclick="joinChallenge(this, 14)">14 Days</button>
+            <button class="challenge-btn" onclick="joinChallenge(this, 30)">30 Days</button>
+          </div>
+        </div>
+      </div>
+      <div class="reel-actions">
+        <button onclick="likeReel(this)">❤️ 892</button>
+        <button onclick="sharePost()">🔄 Share</button>
+      </div>
+    </div>
+
+    <!-- Reel 3: Poll -->
+    <div class="reel">
+      <div class="reel-content">
+        <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80" alt="Reel 3"/>
+        <div class="reel-info">
+          <div class="reel-user">@NatureLover</div>
+          <div class="reel-caption">Sunrise vs Sunset 🌅</div>
+        </div>
+      </div>
+      <div class="reel-interactive">
+        <div class="poll-section">
+          <div class="poll-question">Which do you prefer?</div>
+          <div class="poll-options">
+            <button class="poll-btn" onclick="votePoll(this, 'sunrise')">
+              <span class="poll-label">Sunrise</span>
+              <span class="poll-count">62%</span>
+            </button>
+            <button class="poll-btn" onclick="votePoll(this, 'sunset')">
+              <span class="poll-label">Sunset</span>
+              <span class="poll-count">38%</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="reel-actions">
+        <button onclick="likeReel(this)">❤️ 2.1K</button>
+        <button onclick="sharePost()">🔄 Share</button>
+      </div>
+    </div>
+
+    <!-- Reel 4: Learning Content -->
+    <div class="reel">
+      <div class="reel-content">
+        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=400&q=80" alt="Reel 4"/>
+        <div class="reel-info">
+          <div class="reel-user">@TechInsights</div>
+          <div class="reel-caption">Latest Tech Trends 💻</div>
+        </div>
+      </div>
+      <div class="reel-interactive">
+        <div class="tip-section">
+          <div class="tip-title">Did you know?</div>
+          <div class="tip-content">85% of productivity comes from deep focus. Try the Pomodoro technique!</div>
+          <button class="action-btn" onclick="openModal('Pomodoro Technique: Work 25 min, rest 5 min. Repeat 4 times, then take a long break.')">Learn More</button>
+        </div>
+      </div>
+      <div class="reel-actions">
+        <button onclick="likeReel(this)">❤️ 456</button>
+        <button onclick="sharePost()">🔄 Share</button>
+      </div>
+    </div>
+  </div>
+  <div class="reel-nav">
+    <button onclick="scrollReel(-1)">⬆️ Previous</button>
+    <button onclick="scrollReel(1)">⬇️ Next</button>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

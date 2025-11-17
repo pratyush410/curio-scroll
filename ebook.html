@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curio Scroll — eBook Library</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="image.jpg" class="logo" alt="Curio Scroll Logo"/>
+      <h1>Curio Scroll</h1>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">🏠 Home</a>
+      <a href="reels.html" class="nav-link">🎬 Reels</a>
+      <a href="games.html" class="nav-link">🎮 Games</a>
+      <a href="aitasks.html" class="nav-link">🤖 AI Tasks</a>
+      <a href="ebook.html" class="nav-link active">📚 eBook</a>
+      <a href="explore.html" class="nav-link">🔍 Explore</a>
+      <a href="messages.html" class="nav-link">💬 Messages</a>
+      <a href="profile.html" class="nav-link">👤 Profile</a>
+    </nav>
+  </header>
+  <div class="ebook-container">
+    <h2>📚 eBook Library</h2>
+    <div class="ebook-filters">
+      <button class="filter-btn active" onclick="filterEbooks('all')">All</button>
+      <button class="filter-btn" onclick="filterEbooks('mindfulness')">Mindfulness</button>
+      <button class="filter-btn" onclick="filterEbooks('creativity')">Creativity</button>
+      <button class="filter-btn" onclick="filterEbooks('productivity')">Productivity</button>
+    </div>
+    <div class="ebook-grid">
+      <div class="ebook-card" data-category="mindfulness">
+        <div class="ebook-cover">📚</div>
+        <h3>The Art of Mindful Scrolling</h3>
+        <p class="author">by Curio Editorial</p>
+        <p class="description">Learn how to scroll mindfully and boost your mental health.</p>
+        <div class="ebook-meta">
+          <span>⭐ 4.8 (234 reviews)</span>
+        </div>
+        <div class="ebook-actions">
+          <button onclick="readEbook('mindful-scrolling')">Read Online</button>
+          <button onclick="downloadEbook('mindful-scrolling')">Download</button>
+        </div>
+      </div>
+      <div class="ebook-card" data-category="creativity">
+        <div class="ebook-cover">🎨</div>
+        <h3>Unlocking Creative Potential</h3>
+        <p class="author">by Sarah Chen</p>
+        <p class="description">30 exercises to awaken your inner artist and innovator.</p>
+        <div class="ebook-meta">
+          <span>⭐ 4.9 (189 reviews)</span>
+        </div>
+        <div class="ebook-actions">
+          <button onclick="readEbook('creative-potential')">Read Online</button>
+          <button onclick="downloadEbook('creative-potential')">Download</button>
+        </div>
+      </div>
+      <div class="ebook-card" data-category="productivity">
+        <div class="ebook-cover">⚡</div>
+        <h3>Deep Focus: The Ultimate Guide</h3>
+        <p class="author">by James Miller</p>
+        <p class="description">Master the art of concentration in a distracted world.</p>
+        <div class="ebook-meta">
+          <span>⭐ 4.7 (412 reviews)</span>
+        </div>
+        <div class="ebook-actions">
+          <button onclick="readEbook('deep-focus')">Read Online</button>
+          <button onclick="downloadEbook('deep-focus')">Download</button>
+        </div>
+      </div>
+      <div class="ebook-card" data-category="mindfulness">
+        <div class="ebook-cover">🧘</div>
+        <h3>Meditation for Modern Life</h3>
+        <p class="author">by Dr. Priya Sharma</p>
+        <p class="description">Ancient practices for contemporary challenges.</p>
+        <div class="ebook-meta">
+          <span>⭐ 4.6 (356 reviews)</span>
+        </div>
+        <div class="ebook-actions">
+          <button onclick="readEbook('meditation-modern')">Read Online</button>
+          <button onclick="downloadEbook('meditation-modern')">Download</button>
+        </div>
+      </div>
+      <div class="ebook-card" data-category="creativity">
+        <div class="ebook-cover">💡</div>
+        <h3>Innovation Through Constraints</h3>
+        <p class="author">by Emma Rodriguez</p>
+        <p class="description">How limitations breed creative breakthroughs.</p>
+        <div class="ebook-meta">
+          <span>⭐ 4.8 (267 reviews)</span>
+        </div>
+        <div class="ebook-actions">
+          <button onclick="readEbook('innovation-constraints')">Read Online</button>
+          <button onclick="downloadEbook('innovation-constraints')">Download</button>
+        </div>
+      </div>
+      <div class="ebook-card" data-category="productivity">
+        <div class="ebook-cover">🎯</div>
+        <h3>The Time Mastery Blueprint</h3>
+        <p class="author">by Michael Wong</p>
+        <p class="description">Reclaim your time and transform your life.</p>
+        <div class="ebook-meta">
+          <span>⭐ 4.7 (334 reviews)</span>
+        </div>
+        <div class="ebook-actions">
+          <button onclick="readEbook('time-mastery')">Read Online</button>
+          <button onclick="downloadEbook('time-mastery')">Download</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

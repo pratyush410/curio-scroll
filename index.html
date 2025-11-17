@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curio Scroll — Home</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="image.jpg" class="logo" alt="Curio Scroll Logo"/>
+      <h1>Curio Scroll</h1>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link active">🏠 Home</a>
+      <a href="reels.html" class="nav-link">🎬 Reels</a>
+      <a href="games.html" class="nav-link">🎮 Games</a>
+      <a href="aitasks.html" class="nav-link">🤖 AI Tasks</a>
+      <a href="ebook.html" class="nav-link">📚 eBook</a>
+      <a href="explore.html" class="nav-link">🔍 Explore</a>
+      <a href="messages.html" class="nav-link">💬 Messages</a>
+      <a href="profile.html" class="nav-link">👤 Profile</a>
+    </nav>
+  </header>
+  <div class="main-content">
+    <aside class="sidebar">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="index.html" class="sidebar-link">Home Feed</a></li>
+        <li><a href="reels.html" class="sidebar-link">Interactive Reels</a></li>
+        <li><a href="games.html" class="sidebar-link">Mini Games</a></li>
+        <li><a href="aitasks.html" class="sidebar-link">AI Creative Tasks</a></li>
+        <li><a href="ebook.html" class="sidebar-link">eBook Library</a></li>
+        <li><a href="explore.html" class="sidebar-link">Explore</a></li>
+      </ul>
+    </aside>
+    <section class="feed">
+      <!-- Debate Thread 1 -->
+      <div class="thread-card debate">
+        <div class="thread-header">
+          <div class="avatar">D</div>
+          <div class="thread-meta">
+            <div class="username">@DebateClub</div>
+            <div class="thread-type">⚡ DEBATE</div>
+          </div>
+        </div>
+        <div class="thread-title">Is AI a threat or an opportunity for human creativity?</div>
+        <div class="thread-description">
+          Join the ongoing debate! Share your thoughts on how AI is reshaping creative industries.
+        </div>
+        <div class="debate-options">
+          <button class="vote-btn" onclick="voteDebate(this, 'threat')">🚨 Threat (234 votes)</button>
+          <button class="vote-btn" onclick="voteDebate(this, 'opportunity')">🚀 Opportunity (456 votes)</button>
+        </div>
+        <div class="thread-actions">
+          <button onclick="joinThread(this)">Join Discussion</button>
+          <button onclick="sharePost()">Share</button>
+        </div>
+      </div>
+
+      <!-- Thought Experiment Thread 1 -->
+      <div class="thread-card thought-experiment">
+        <div class="thread-header">
+          <div class="avatar">T</div>
+          <div class="thread-meta">
+            <div class="username">@PhilosophyMind</div>
+            <div class="thread-type">💭 THOUGHT EXPERIMENT</div>
+          </div>
+        </div>
+        <div class="thread-title">The Trolley Problem in the Age of Autonomous Vehicles</div>
+        <div class="thread-description">
+          If a self-driving car must choose between hitting 5 pedestrians or 1, should it make an ethical choice?
+        </div>
+        <div class="thought-options">
+          <button class="choice-btn" onclick="chooseOption(this, 'save-one')">Save 1 Person</button>
+          <button class="choice-btn" onclick="chooseOption(this, 'save-five')">Save 5 People</button>
+          <button class="choice-btn" onclick="chooseOption(this, 'neutral')">Random/Neutral</button>
+        </div>
+        <div class="thread-actions">
+          <button onclick="joinThread(this)">Discuss</button>
+          <button onclick="sharePost()">Share</button>
+        </div>
+      </div>
+
+      <!-- Debate Thread 2 -->
+      <div class="thread-card debate">
+        <div class="thread-header">
+          <div class="avatar">S</div>
+          <div class="thread-meta">
+            <div class="username">@SocialImpact</div>
+            <div class="thread-type">⚡ DEBATE</div>
+          </div>
+        </div>
+        <div class="thread-title">Should social media have content moderation limits?</div>
+        <div class="thread-description">
+          Freedom of speech vs. responsibility: Where should platforms draw the line?
+        </div>
+        <div class="debate-options">
+          <button class="vote-btn" onclick="voteDebate(this, 'strict')">🔒 Strict Moderation (189 votes)</button>
+          <button class="vote-btn" onclick="voteDebate(this, 'free')">🗽 Free Speech (512 votes)</button>
+        </div>
+        <div class="thread-actions">
+          <button onclick="joinThread(this)">Join Discussion</button>
+          <button onclick="sharePost()">Share</button>
+        </div>
+      </div>
+
+      <!-- Thought Experiment Thread 2 -->
+      <div class="thread-card thought-experiment">
+        <div class="thread-header">
+          <div class="avatar">P</div>
+          <div class="thread-meta">
+            <div class="username">@FutureThinking</div>
+            <div class="thread-type">💭 THOUGHT EXPERIMENT</div>
+          </div>
+        </div>
+        <div class="thread-title">If you could live any historical period, when would it be?</div>
+        <div class="thread-description">
+          Consider the technological, social, and personal implications of your choice.
+        </div>
+        <div class="thought-options">
+          <button class="choice-btn" onclick="chooseOption(this, 'past')">Ancient Past</button>
+          <button class="choice-btn" onclick="chooseOption(this, 'future')">Far Future</button>
+          <button class="choice-btn" onclick="chooseOption(this, 'present')">Present Time</button>
+        </div>
+        <div class="thread-actions">
+          <button onclick="joinThread(this)">Share Your Answer</button>
+          <button onclick="sharePost()">Share</button>
+        </div>
+      </div>
+
+      <!-- Regular Post -->
+      <div class="post-card">
+        <div class="post-header">
+          <div class="avatar">R</div>
+          <div class="username">@Rishi</div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=400&q=80" class="post-image" alt="Post"/>
+        <div class="post-text">Beautiful morning vibes! 🌅 Check out my interactive reel about mindful productivity.</div>
+        <div class="post-actions">
+          <button onclick="likePost(this)" data-default="👍 Like">👍 Like</button>
+          <button onclick="commentPost()">💬 Comment</button>
+          <button onclick="sharePost()">🔄 Share</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
